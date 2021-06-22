@@ -1,7 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url(https://cdn.jsdelivr.net/npm/bootstrap-4-grid@3.4.0/css/grid.min.css);
+
 .container {
     max-width: 900px;
     margin: 0 auto;
     padding: 15px;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

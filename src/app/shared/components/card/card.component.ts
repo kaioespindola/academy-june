@@ -7,15 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CardComponent implements OnInit {
 
-  public nomeUsuario: string = "Carlos";
-
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  mudarNome(nome: string) {
-    this.nomeUsuario = nome;
   }
 
 }

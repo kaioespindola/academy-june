@@ -1,22 +1,19 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CardComponent } from './components/card/card.component';
-import { ListaComponent } from './components/lista/lista.component';
-import { PerfilComponent } from './components/perfil/perfil.component';
 
 const routes: Routes = [
   {
-    path: '', component: CardComponent
+    path: 'home',
+    loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
   {
-    path: 'lista', component: ListaComponent
+    path: 'login',
+    loadChildren: () => import('./modules/login/login.module').then(m => m.LoginModule)
   },
   {
-    path: 'perfil', component: PerfilComponent
-  },
-  {
-    path: '**',
-    redirectTo: ''
+    path: '',
+    redirectTo: '/login',
+    pathMatch: 'full'
   }
 ];
 
